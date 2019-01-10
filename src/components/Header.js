@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header() {
+function Header(props) {
     return (
         <header>
             <nav className="navbar-dark bg-dark fixed-top">
@@ -10,10 +10,10 @@ function Header() {
                             <a className="navbar-brand" href="/"><h1>Clicky Game</h1></a>
                         </div>
                         <div className="col-sm-auto">
-                            <p className="mb-0">Click an image to begin! To earn points avoid clicking the same image more than once.</p>
+                            <p className="mb-0">{props.guessedStatus}</p>
                         </div>
                         <div className="col-sm-auto">
-                            <p className="mb-0"><strong>Score:</strong> 0  <strong>| Top Score:</strong> 12 </p>
+                            <p className="mb-0"><strong>Score:</strong> {props.score}  <strong>| Top Score:</strong> {props.topScore} </p>
                         </div>
                     </div>
                 </div>
